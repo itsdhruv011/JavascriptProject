@@ -5,6 +5,7 @@ var router = express.Router()
 router.get("/", function (req, res, next) {
     res.render("index", {
         title: "COMP 206, Assignment 2",
+        cinema: "Angel CineWorld",
         author: "Dhruv Nitinbhai Vaghasiya",
     })
 })

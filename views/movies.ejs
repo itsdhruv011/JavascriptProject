@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        .movie-container{
+            padding: 1em;
+            font-size: medium;
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
-    <ol>
+    <ol class="moviesList">
         <% movies.forEach(movie=>{ %>
-            <pre><%= JSON.stringify(movie,null,4) %>
+                    <div class="movie-container">
+                        <div class="movie-title"> <%= movie.title %> </div>
+                    </div>
             <% }) %>
     </ol>
 </body>

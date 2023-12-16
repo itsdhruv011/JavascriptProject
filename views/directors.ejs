@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Directors</h1>
+
+    <table class="directorTable">
+        <thead>
+            <tr>
+                <th>Director</th>
+                <th>Movies</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% directors.forEach((director) => { %>
+                <tr>
+                    <td><%= director %></td>
+                    <td>
+                        <ul>
+                            <% movies.forEach((movie) => { %>
+                                <% if (movie.directors.indexOf(director) !== -1) { %>
+                                    <li><%= movie.title %></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

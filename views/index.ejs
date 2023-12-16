@@ -5,14 +5,59 @@
   <title>
     <%= title %>
   </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/public/stylesheets/style.css' />
+  <style>
+    body{
+      background-color: burlywood;
+    }
+    .btnContainer{
+      color: brown;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+    #btn{
+      background-color: aqua;
+      flex: auto;
+    }
+  
+    
+  </style>
 </head>
 
 <body>
   <h1>
-    <%= title %>
+     <%= title %>
   </h1>
-  <p>Written by: <em>
+  <h1>
+    <%= cinema %>
+  </h1>
+<div class="btnContainer">
+  <p>
+    <button id="btn">
+      <a href="/db/directors">Directors of all Short Movies</a>
+    </button>
+
+    <!-- Add other buttons for different queries -->
+    <button id="btn">
+      <a href="/db/collections">List Collections</a>
+    </button>
+
+    <button id="btn">
+      <a href="/db/movies">List Movies</a>
+    </button>
+
+    <button id="btn">
+      <a href="/db/genre">Comedy Movies</a>
+    </button>
+
+    <button id="btn">
+      <a href="/db/history">Historic Movies by IMDb Rating</a>
+    </button>
+    </p>
+  </div>
+
+
+  <p>Written by:  <em>
       <%= author %>
     </em>
   </p>
