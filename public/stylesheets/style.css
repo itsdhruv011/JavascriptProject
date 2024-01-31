@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
- /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+body{
+    background-color: burlywood;
+}
+ol{
+    padding: 1em;
+    font-size: medium;
+    color: red;
+}
+.btnContainer{
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+ #btn{
+    background-color: aqua;
+    flex: auto;
 }
 
-a {
-  color: #00B7FF;
-}
+  

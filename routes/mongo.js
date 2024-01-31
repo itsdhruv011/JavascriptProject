@@ -31,8 +31,8 @@ router.get("/movies", async (req, res) => {
       let data={
         movies:movies,
             }
-     // res.render("movies",data);
-            res.json(data);
+     res.render("movies",data);
+            //res.json(data);
       } catch (error) {
       console.error("Error fetching movies:", error);
       res.status(500).render({ error: "Internal Server Error" });
